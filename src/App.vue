@@ -38,3 +38,6 @@ export default {
   })
 };
 </script>
+<style scoped>
+/* @import "./assets/debug.css"; */
+</style>
