@@ -11,10 +11,11 @@
             prepend-icon="mdi-account-circle"
           />
           <v-text-field
-            type="password"
+            :type="showPassword ? 'text' : 'password'"
             label="Contraseña"
             prepend-icon="mdi-lock"
-            append-icon="mdi-eye-off"
+            :append-icon="showPassword ? 'mdi-eye' : 'mdi-eye-off'"
+            @click:append="showPassword = !showPassword"
           />
         </v-form>
       </v-card-text>
@@ -30,6 +31,9 @@
 <script>
 // @ is an alias to /src
 export default {
-  name: "login"
+  name: "login",
+  data: () => ({
+    showPassword: false
+  })
 };
 </script>
